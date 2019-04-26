@@ -1,6 +1,6 @@
 
   name: pyydl
-  version: 'master'
+  version: 1.0
   summary: pyYDL
   description: |
     This is just another app for a presentation.
