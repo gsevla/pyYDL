@@ -1,21 +1,32 @@
-import setuptools
+import os
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+from setuptools import setup
 
-setuptools.setup(
-    name="pyydl",
-    version="1.0",
-    author="Gabriel Alves",
-    author_email="gabrieltots@gmail.com",
-    description="This is just another app for a presentation",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/gsevla/pyYDL",
-    packages=setuptools.find_packages(),
+with open('README.md') as readme_file:
+    readme = readme_file.read()
+
+this = os.path.dirname(os.path.realpath(__file__))
+
+def read(name):
+    with open(os.path.join(this, name)) as f:
+        return f.read()
+setup(
+    name='pyydl',
+    version='0.1',
+    description='test',
+    long_description=readme,
+    author='Gabriel Alves',
+    author_email='gabrieltots@gmail.com',
+    packages=['mysrc'],
+    install_requires=read('requirements.txt'),
+    include_package_data=True,
+    zip_safe=True,
+    keywords='example app snap linux ubuntu',
     classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'Natural Language :: English'
     ],
+    test_suite='tests',
+    scripts=['bin/pyydl']
 )
