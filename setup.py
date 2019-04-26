@@ -12,21 +12,22 @@ def read(name):
         return f.read()
 setup(
     name='pyydl',
-    version='0.1',
-    description='test',
+    version='1.0',
+    description='description',
     long_description=readme,
     author='Gabriel Alves',
     author_email='gabrieltots@gmail.com',
-    packages=['mysrc'],
+    url='https://github.com/gsevla/pyYDL',
+    packages=['my_src'],
     install_requires=read('requirements.txt'),
     include_package_data=True,
     zip_safe=True,
+    license='MIT',
     keywords='example app snap linux ubuntu',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 5 - Production/devel',
         'Intended Audience :: Developers',
         'Natural Language :: English'
     ],
-    test_suite='tests',
     scripts=['bin/pyydl']
 )
