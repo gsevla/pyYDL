@@ -1,0 +1,14 @@
+
+  name: pyydl
+  version: 'master'
+  summary: pyYDL
+  description: |
+    This is just another app for a presentation.
+
+  grade: stable # must be 'stable' to release into candidate/stable channels
+  confinement: devmod # use 'strict' once you have the right plugs and slots
+
+  parts:
+    pyydl_part:
+      plugin: python
+      python-packages: [youtube_dl]
