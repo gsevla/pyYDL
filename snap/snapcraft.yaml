@@ -8,6 +8,10 @@
   grade: stable # must be 'stable' to release into candidate/stable channels
   confinement: devmod # use 'strict' once you have the right plugs and slots
 
+  apps:
+    pyydl:
+      command: pyydl
+
   parts:
     pyydl_part:
       plugin: python
